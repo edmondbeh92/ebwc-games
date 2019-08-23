@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../style/color';
-import '../../style/other';
+import '../../style/color.css';
+import '../../style/other.css';
 
 export const PageLinks = () => (
 
