@@ -9,19 +9,22 @@ import {
   faBars,
   faGamepad,
   faFighterJet,
-  faLink
+  faLink,
+  faCopyright
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   faBars,
   faGamepad,
   faFighterJet,
-  faLink
+  faLink,
+  faCopyright
 );
 
 export const App = () => (
-  <>
+  <div style={{ background: '#36403b' }}>
     <Header />
+    <Content />
     <Footer />
-  </>
+  </div>
 )
