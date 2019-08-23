@@ -1,21 +1,14 @@
 import React from 'react';
+import { Logo } from './Logo';
 
-export const Header = () => {
+export const Header = () => (
     <div>
-
-
 
         <div class='bg-color-one sticky'>
             <div class='container'>
                 <div class='row text-center pt-3 pb-2'>
-                    <div class='text-left col-9 col-sm-6 pl-4'>
-                        <h3><a href="index.html" class='text-gray text-link' id='home-button'>
-                            <img src="../Pictures/ebwc_weblogo.PNG" alt="EBWC_Logo" class='ebwc-icon' />
-                            <span class='pl-1'>EBWC Games</span>
-                        </a>
-                        </h3>
-                    </div>
 
+                    <Logo />
 
 
                     <div class='text-right col-3 col-sm-6  pr-5'>
@@ -54,9 +47,5 @@ export const Header = () => {
             </div>
         </div>
 
-
-
-
-
     </div>
-}
+)

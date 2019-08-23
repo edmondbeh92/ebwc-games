@@ -1,11 +1,10 @@
 import React from 'react';
-import Header from './Header/Header';
-import Content from './Content/Content';
-import Footer from './Footer/Footer';
+import { Header } from './header/Header';
+import { Content } from './content/Content';
+import { Footer } from './footer/Footer';
 
 export const App = () => (
   <>
     <Header />
-
   </>
 )
