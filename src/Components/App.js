@@ -6,5 +6,6 @@ import { Footer } from './Footer/Footer';
 export const App = () => (
   <>
     <Header />
+    <Footer />
   </>
 )
