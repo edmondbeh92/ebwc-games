@@ -22,5 +22,6 @@ library.add(
 export const App = () => (
   <>
     <Header />
+    <Footer />
   </>
 )
