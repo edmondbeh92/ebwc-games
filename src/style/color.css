@@ -1,0 +1,31 @@
+.text-gray {
+    color: #eaeff9;
+}
+
+.text-color-one {
+    color: #2C3531;
+}
+
+.text-color-two {
+    color: #116466;
+}
+
+.text-color-three {
+    color: #D1E8E2;
+}
+
+.bg-color-one {
+    background-color: #2C3531;
+}
+
+.bg-color-two {
+    background-color: #116466;
+}
+
+.bg-color-three {
+    background-color: #D1E8E2;
+}
+
+.bg-gradient {
+    background-image: linear-gradient(black, gray);
+}
