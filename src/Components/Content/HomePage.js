@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Content = () => (
+export const HomePage = () => (
 
     <div className='container text-center'>
         <img src={require("../../images/ebwc_weblogo.png")} alt="EBWC_Logo" className='ebwc-img' />
@@ -24,4 +24,5 @@ export const Content = () => (
             </h4>
         </div>
     </div>
+
 )

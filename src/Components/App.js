@@ -1,6 +1,9 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Header } from './Header/Header';
-import { Content } from './Content/Content';
+import { HomePage } from './Content/HomePage';
+import { Games } from './Content/Games';
+import { Models } from './Content/Models';
 import { Footer } from './Footer/Footer';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -22,9 +25,14 @@ library.add(
 );
 
 export const App = () => (
-  <div style={{ background: '#36403b' }}>
-    <Header />
-    <Content />
-    <Footer />
-  </div>
+  <BrowserRouter basename='/home/'>
+    <div style={{ background: '#36403b' }}>
+      <Header />
+      <Switch>
+        <Route path='/games' component={Games} exact />
+        <Route path='/3d_models' component={Models} exact />
+      </Switch>
+      <Footer />
+    </div>
+  </BrowserRouter>
 )

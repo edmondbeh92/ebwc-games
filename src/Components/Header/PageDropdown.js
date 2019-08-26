@@ -8,17 +8,17 @@ export const PageDropdown = () => {
 
     const linkProps = [
         {
-            url: "games.html",
+            id: 1,
             icon: 'gamepad',
             text: 'GAMES'
         },
         {
-            url: "3d_models.html",
+            id: 2,
             icon: 'fighter-jet',
             text: '3D MODELS'
         },
         {
-            url: "links.html",
+            id: 3,
             icon: 'link',
             text: 'LINKS'
         }

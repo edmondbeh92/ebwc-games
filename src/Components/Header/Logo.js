@@ -5,17 +5,20 @@ import '../../style/other.css';
 
 export const Logo = () => {
 
-    const addGlowClass = e => e.target.querySelector('img').classList.add('icon-glow');
-    const removeGlowClass = e => e.target.querySelector('img').classList.remove('icon-glow');
+    const [glow, setGlow] = useState(false);
+    const logoClass = `ebwc-icon ${glow ? 'icon-glow' : ''}`
 
     return (
-        <div className='text-left col-9 col-sm-6 pl-4' onMouseEnter={addGlowClass} onMouseLeave={removeGlowClass}>
+        <div
+            className='text-left col-9 col-sm-6 pl-4'
+            onMouseEnter={() => setGlow(true)}
+            onMouseLeave={() => setGlow(false)} >
             <h3>
                 <a href="index.html" className='text-gray text-link'>
-                    <img src={require("../../images/ebwc_weblogo.png")} alt="EBWC_Logo" className='ebwc-icon' />
+                    <img src={require("../../images/ebwc_weblogo.png")} alt="EBWC_Logo" className={logoClass} />
                     <span className='pl-1'>EBWC Games</span>
                 </a>
             </h3>
-        </div>
+        </div >
     );
 }
