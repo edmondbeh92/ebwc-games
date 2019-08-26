@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../style/iframe.css';
 
 export const Games = () => (
 

@@ -3,8 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Header } from './Header/Header';
 import { HomePage } from './Content/HomePage';
 import { Games } from './Content/Games';
-import { Models } from './Content/Models';
-import { Links } from './Content/Links';
+//import { Models } from './Content/Models';
 import { Footer } from './Footer/Footer';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -14,7 +13,8 @@ import {
   faGamepad,
   faFighterJet,
   faLink,
-  faCopyright
+  faCopyright,
+  faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -22,7 +22,8 @@ library.add(
   faGamepad,
   faFighterJet,
   faLink,
-  faCopyright
+  faCopyright,
+  faEnvelope
 );
 
 export const App = () => (
@@ -32,8 +33,6 @@ export const App = () => (
       <Switch>
         <Route path='/' component={HomePage} exact />
         <Route path='/games' component={Games} exact />
-        <Route path='/3d_models' component={Models} exact />
-        <Route path='/links' component={Links} exact />
       </Switch>
       <Footer />
     </div>
