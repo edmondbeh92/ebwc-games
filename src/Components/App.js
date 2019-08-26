@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Header } from './Header/Header';
 import { HomePage } from './Content/HomePage';
-import { Games } from './Content/Games';
-//import { Models } from './Content/Models';
+import { Games } from './Content/Games/Games';
+//import { Models } from './Content/Models/Models';
 import { Footer } from './Footer/Footer';
 
 import { library } from '@fortawesome/fontawesome-svg-core';

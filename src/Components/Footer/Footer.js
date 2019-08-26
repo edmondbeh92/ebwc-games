@@ -47,12 +47,12 @@ export const Footer = () => {
     const links = externalLinks.map(externalLink => <WebLinks key={externalLink.id} props={externalLink} />)
 
     return (
-        <div className='bg-color-one'>
+        <div className='bg-color-one pt-3 mt-5'>
             <footer className='container text-center text-gray pt-3 pb-3'>
                 <div className='d-flex flex-row justify-content-center flex-wrap'>
                     {links}
                 </div>
-                <h5 className='py-4'><FontAwesomeIcon icon='copyright' /> 2019 Copyright</h5>
+                <h5 className='py-4'><FontAwesomeIcon icon='copyright' /> 2018 Copyright</h5>
             </footer>
         </div>
     );
