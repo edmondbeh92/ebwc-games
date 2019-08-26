@@ -18,12 +18,6 @@ export const PageDropdown = () => {
             url: '3d_models',
             icon: 'fighter-jet',
             text: '3D MODELS'
-        },
-        {
-            id: 3,
-            url: 'links',
-            icon: 'link',
-            text: 'LINKS'
         }
     ]
 

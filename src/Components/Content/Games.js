@@ -28,7 +28,7 @@ export const Games = () => (
                     This was my first project made using GameMaker Studio 1.4. It is
                     a vertical shmup featuring 6 missions with 6 bosses, 60 fps gameplay,
                     and a few ship upgrades. It is available in both Windows PC and Android.
-                    <a href="https://ebwc-games.itch.io/celestial-raid" target="_blank">
+                    <a href="https://ebwc-games.itch.io/celestial-raid" target="_blank" rel="noopener noreferrer">
                         Play
                     </a>
                 </h3>
