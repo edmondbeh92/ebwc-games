@@ -4,9 +4,8 @@ export const HomePage = () => (
 
     <div className='container text-center'>
         <img src={require("../../images/ebwc_weblogo.png")} alt="EBWC_Logo" className='ebwc-img' />
-        <br />
         <hr />
-        <div className='text-justify text-color-three py-5'>
+        <div className='text-justify text-color-three py-3'>
             <h4>
                 Hello there! EBWC Games is maintained by me, a one man hobbyist game developer.
                 I like arcade style shooter such as shmups and top-down shooters. I also like games that

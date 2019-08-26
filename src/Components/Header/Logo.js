@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../../style/color.css';
 import '../../style/image.css';
 import '../../style/other.css';
@@ -14,10 +15,10 @@ export const Logo = () => {
             onMouseEnter={() => setGlow(true)}
             onMouseLeave={() => setGlow(false)} >
             <h3>
-                <a href="index.html" className='text-gray text-link'>
-                    <img src={require("../../images/ebwc_weblogo.png")} alt="EBWC_Logo" className={logoClass} />
+                <Link to="/" className='text-gray text-link'>
+                    <img src={require("../../images/ebwc_weblogo.png")} alt="EBWC_Icon" className={logoClass} />
                     <span className='pl-1'>EBWC Games</span>
-                </a>
+                </Link>
             </h3>
         </div >
     );
