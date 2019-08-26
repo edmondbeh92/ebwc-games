@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PageLinks } from './PageLinks'
 import '../../style/color.css';
 import '../../style/other.css';
@@ -24,17 +24,20 @@ export const PageDropdown = () => {
         }
     ]
 
-    const pageLinks = linkProps.map(linkProp => <PageLinks props={linkProp} />);
+    const pageLinks = linkProps.map(linkProp => <PageLinks linkProps={linkProp} />);
+
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleOpen = () => setIsOpen(!isOpen);
+    const menuClass = `dropdown-menu${isOpen ? ' show' : ''} dropdown-menu-right bg-color-one`;
 
     return (
-        <div class='text-right col-3 col-sm-6 pr-5'>
+        <div className='text-right col-3 col-sm-6 pr-5'>
 
-            <div class='dropdown'>
-                <button type='button' class='btn btn-secondary btn-sm'
-                    data-toggle='dropdown'>
+            <div className='dropdown' onClick={toggleOpen} >
+                <button className='btn btn-secondary btn-sm'>
                     <FontAwesomeIcon icon='bars' />
                 </button>
-                <div class='dropdown-menu dropdown-menu-right show bg-color-one'>
+                <div className={menuClass}>
                     {pageLinks}
                 </div>
             </div>

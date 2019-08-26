@@ -4,9 +4,9 @@ import { PageDropdown } from './PageDropdown';
 
 export const Header = () => (
     <div>
-        <div class='bg-color-one sticky'>
-            <div class='container'>
-                <div class='row text-center pt-3 pb-2'>
+        <div className='bg-color-one sticky'>
+            <div className='container'>
+                <div className='row text-center pt-3 pb-2'>
                     <Logo />
                     <PageDropdown />
                 </div>
