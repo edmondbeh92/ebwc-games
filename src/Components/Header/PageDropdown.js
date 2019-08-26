@@ -31,7 +31,7 @@ export const PageDropdown = () => {
     const menuClass = `dropdown-menu${isOpen ? ' show' : ''} dropdown-menu-right bg-color-one`;
 
     return (
-        <div className='text-right col-3 col-sm-6 pr-5'>
+        <div className='text-right col-3 col-sm-6 pr-4 mt-1'>
 
             <div className='dropdown' onClick={toggleOpen} >
                 <button className='btn btn-secondary btn-sm'>

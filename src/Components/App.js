@@ -28,6 +28,7 @@ export const App = () => (
   <BrowserRouter basename='/home/'>
     <div style={{ background: '#36403b' }}>
       <Header />
+      <HomePage />
       <Switch>
         <Route path='/games' component={Games} exact />
         <Route path='/3d_models' component={Models} exact />
