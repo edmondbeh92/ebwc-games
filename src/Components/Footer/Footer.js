@@ -9,32 +9,38 @@ export const Footer = () => {
         {
             id: 1,
             url: "https://www.facebook.com/ebwcgames/",
-            icon: faFacebookSquare
+            icon: faFacebookSquare,
+            tooltip: 'Facebook'
         },
         {
             id: 2,
             url: "https://www.instagram.com/ebwcgames/",
-            icon: faInstagram
+            icon: faInstagram,
+            tooltip: 'Instagram'
         },
         {
             id: 3,
             url: "https://www.youtube.com/channel/UC9BABQRYm2wtb6VtGOEn15Q",
-            icon: faYoutube
+            icon: faYoutube,
+            tooltip: 'Youtube'
         },
         {
             id: 4,
             url: "https://ebwc-games.itch.io/",
-            icon: faItchIo
+            icon: faItchIo,
+            tooltip: 'Itch-io'
         },
         {
             id: 5,
             url: "https://sketchfab.com/edmondbeh92",
-            icon: null
+            icon: null,
+            tooltip: 'Sketchfab'
         },
         {
             id: 6,
             url: "ebgames12418@gmail.com",
-            icon: 'envelope'
+            icon: 'envelope',
+            tooltip: 'E-mail'
         }
     ]
 
@@ -43,10 +49,9 @@ export const Footer = () => {
     return (
         <div className='bg-color-one'>
             <footer className='container text-center text-gray pt-3 pb-3'>
-                <div>
+                <div className='d-flex flex-row justify-content-center flex-wrap'>
                     {links}
                 </div>
-
                 <h5 className='py-4'><FontAwesomeIcon icon='copyright' /> 2019 Copyright</h5>
             </footer>
         </div>
