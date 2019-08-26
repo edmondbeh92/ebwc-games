@@ -24,7 +24,7 @@ export const PageDropdown = () => {
         }
     ]
 
-    const pageLinks = linkProps.map(linkProp => <PageLinks linkProps={linkProp} />);
+    const pageLinks = linkProps.map(linkProp => <PageLinks key={linkProp.id} linkProps={linkProp} />);
 
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = () => setIsOpen(!isOpen);
