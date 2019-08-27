@@ -4,7 +4,7 @@ import '../../../style/other.css'
 
 export const GameList = props => {
 
-    const gameTags = props.ids_names.map(id_name => <GameListTab id={id_name.id} name={id_name.name} />)
+    const gameTags = props.ids_names.map(id_name => <GameListTab key={id_name.id} id={id_name.id} name={id_name.name} />)
 
     return (
         <div className='d-flex flex-column gamelist'>

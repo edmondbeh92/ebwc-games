@@ -26,7 +26,7 @@ export const GameContent = props => {
 
             <div className="container_iframe">
                 <div className="iframe_wrapper">
-                    <iframe className="iframe_content" id="CR_video" src={props.selectedGame.youtube_link}
+                    <iframe className="iframe_content" title="CR_video" src={props.selectedGame.youtube_link}
                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
