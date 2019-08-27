@@ -6,7 +6,7 @@ export const GameContent = props => {
     const images = props.selectedGame.img_url.map(image => <img src={image} alt='x' className='game-images' />);
 
     return (
-        <div className='text-center pt-2 gamecontent'>
+        <div className='text-center pt-2 content'>
             <h1 className='text-light'>{props.selectedGame.name}</h1>
             <p className='text-light'>Made with {props.selectedGame.engine}</p>
             <img src={props.selectedGame.splash_url} alt='x' className='splash-img' />
@@ -26,7 +26,7 @@ export const GameContent = props => {
 
             <div className="container_iframe">
                 <div className="iframe_wrapper">
-                    <iframe className="iframe_content" id="CR_video" src={props.selectedGame.youtube_link}
+                    <iframe className="iframe_content" title="CR_video" src={props.selectedGame.youtube_link}
                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>

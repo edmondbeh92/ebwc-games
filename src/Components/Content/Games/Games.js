@@ -6,7 +6,7 @@ import '../../../style/iframe.css';
 
 export const Games = () => {
 
-    const [selectGame, setSelectGame] = useState(null);
+    //const [selectGame, setSelectGame] = useState(null);
 
     const gameList = [
         {

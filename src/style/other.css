@@ -14,16 +14,18 @@
   z-index: 2;
 }
 
-.gamelist {
+.list {
   height: 100%;
   position: fixed;
   z-index: 1;
   background: #116466;
-  padding-left: 40px;
-  border-color: red;
+  padding-left: 50px;
+  padding-bottom: 400px;
+  border-color: black;
+  overflow: auto;
 }
 
-.gamecontent {
+.content {
   margin-left: 300px;
   margin-right: 30px;
 }
