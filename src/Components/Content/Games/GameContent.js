@@ -11,7 +11,7 @@ export const GameContent = props => {
             <p className='text-light'>Made with {props.selectedGame.engine}</p>
             <img src={props.selectedGame.splash_url} alt='x' className='splash-img' />
 
-            <h4 className='text-light'>
+            <h4 className='text-light pt-5 pb-4'>
                 {props.selectedGame.description}
                 <br />
                 <a

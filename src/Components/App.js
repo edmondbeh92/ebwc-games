@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Header } from './Header/Header';
 import { HomePage } from './Content/HomePage';
 import { Games } from './Content/Games/Games';
+import { GameContent } from './Content/Games/GameContent';
 //import { Models } from './Content/Models/Models';
 import { Footer } from './Footer/Footer';
 
@@ -30,7 +31,7 @@ export const App = () => (
       <Switch>
         <Route path='/' component={HomePage} exact />
         <Route path='/games' component={Games} exact />
-        <Route path='/games/:id' component={Games} />
+        <Route path='/games/:id' component={GameContent} />
       </Switch>
       <Footer />
     </div>

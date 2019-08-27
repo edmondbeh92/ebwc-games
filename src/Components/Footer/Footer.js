@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../style/other.css';
 import { WebLinks } from './WebLinks'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faInstagram, faYoutube, faItchIo } from '@fortawesome/free-brands-svg-icons';
@@ -47,8 +48,8 @@ export const Footer = () => {
     const links = externalLinks.map(externalLink => <WebLinks key={externalLink.id} props={externalLink} />)
 
     return (
-        <div className='bg-color-one pt-3 mt-5'>
-            <footer className='container text-center text-gray pt-3 pb-3'>
+        <div className='bg-color-one pt-3 mt-5 footer'>
+            <footer className='container text-center text-gray pt-3 pb-3 footer-inner'>
                 <div className='d-flex flex-row justify-content-center flex-wrap'>
                     {links}
                 </div>
