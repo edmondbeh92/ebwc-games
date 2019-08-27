@@ -54,9 +54,11 @@ export const Models = () => {
         setModelList(data);
     }
 
+    //<ModelList data={modelList} />
+
     return (
         <div>
-            <ModelList data={modelList} />
+
             <Model data={modelList[1]} />
         </div>
     )
