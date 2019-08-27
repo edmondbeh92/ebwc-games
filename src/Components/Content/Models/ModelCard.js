@@ -4,10 +4,18 @@ import '../../../style/image.css';
 export const ModelCard = props => {
 
     const [hover, setHover] = useState(false);
-    const cardHover = `card mt-5 ${hover ? 'card-hover' : ''}`
+    const cardHover = `card mt-5 ${hover ? 'card-hover' : ''}`;
+
+    const handleChange = () => {
+        console.log(props.data.title)
+    }
 
     return (
-        <div className={cardHover} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+        <div
+            className={cardHover}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            onClick={handleChange}>
             <img
                 src={props.data.thumbnail_url}
                 alt='model-image'

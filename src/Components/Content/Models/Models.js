@@ -57,7 +57,7 @@ export const Models = () => {
     return (
         <div>
             <ModelList data={modelList} />
-            <Model id={chosen} data={modelList[chosen]} />
+            <Model data={modelList[1]} />
         </div>
     )
 }
