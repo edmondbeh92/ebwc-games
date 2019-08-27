@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { GameList } from './GameList';
 import { GameContent } from './GameContent';
+import { Link } from 'react-router-dom';
 import '../../../style/iframe.css';
 
 export const Games = () => {
