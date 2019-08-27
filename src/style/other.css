@@ -3,9 +3,18 @@
     text-decoration: none;
   }
 
-.sticky {
+.sticky-header {
     position: sticky;
     top: 0;
+    z-index: 1;
+}
+
+.gamelist {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  background: gray;
+  padding-left: 40px;
 }
 
 .react-tooltip-lite {

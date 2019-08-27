@@ -1,22 +1,28 @@
 import React from 'react';
+import '../../../style/image.css';
 
 export const GameContent = props => {
 
-    //const images = props.selectedGame.img_url.map(image => <img src={require(image)} alt='x' />);
-    const image = props.selectedGame.splash_url;
+    const images = props.selectedGame.img_url.map(image => <img src={image} alt='x' className='game-images' />);
 
     return (
-        <div>
-            <h1>{props.selectedGame.name}</h1>
-            <p>Made with {props.selectedGame.engine}</p>
-            <img src={require(image)} alt='x' />
+        <div className='text-center col-8'>
+            <h1 className='text-light'>{props.selectedGame.name}</h1>
+            <p className='text-light'>Made with {props.selectedGame.engine}</p>
+            <img src={props.selectedGame.splash_url} alt='x' className='splash-img' />
 
-            <h3>
+            <h4 className='text-light'>
                 {props.selectedGame.description}
-                <a href={props.selectedGame.game_link} target="_blank" alt='x' rel="noopener noreferrer">
-                    Play
-                    </a>
-            </h3>
+                <br />
+                <a
+                    href={props.selectedGame.game_link}
+                    target="_blank"
+                    alt='x'
+                    rel="noopener noreferrer"
+                    className='btn btn-secondary btn-sm my-3'>
+                    <strong>Play</strong>
+                </a>
+            </h4>
 
             <div className="container_iframe">
                 <div className="iframe_wrapper">
@@ -28,7 +34,7 @@ export const GameContent = props => {
 
             <div>
                 <h3>GALLERY:</h3>
-
+                {images}
             </div>
         </div>
     )
