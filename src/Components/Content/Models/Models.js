@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ModelList } from './ModelList';
-import { Model } from './Model';
+import { ModelContent } from './ModelContent';
 import '../../../style/iframe.css';
 
 
@@ -54,12 +54,11 @@ export const Models = () => {
         setModelList(data);
     }
 
-    //<ModelList data={modelList} />
 
     return (
-        <div>
-
-            <Model data={modelList[1]} />
+        <div className='row'>
+            <ModelList data={modelList} />
+            <ModelContent data={modelList[1]} />
         </div>
     )
 }

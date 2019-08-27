@@ -6,7 +6,7 @@ export const ModelList = props => {
     const modelTags = props.data.map(model => <ModelCard key={model.title} data={model} />)
 
     return (
-        <div className='d-flex flex-column list'>
+        <div className='col-12 col-sm-4 list'>
             {modelTags}
         </div>
     )
