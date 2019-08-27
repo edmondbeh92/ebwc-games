@@ -30,6 +30,7 @@ export const App = () => (
       <Switch>
         <Route path='/' component={HomePage} exact />
         <Route path='/games' component={Games} exact />
+        <Route path='/games/:id' component={Games} />
       </Switch>
       <Footer />
     </div>

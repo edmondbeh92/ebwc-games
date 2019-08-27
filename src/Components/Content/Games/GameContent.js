@@ -6,7 +6,7 @@ export const GameContent = props => {
     const images = props.selectedGame.img_url.map(image => <img src={image} alt='x' className='game-images' />);
 
     return (
-        <div className='text-center col-8'>
+        <div className='text-center pt-2 gamecontent'>
             <h1 className='text-light'>{props.selectedGame.name}</h1>
             <p className='text-light'>Made with {props.selectedGame.engine}</p>
             <img src={props.selectedGame.splash_url} alt='x' className='splash-img' />
