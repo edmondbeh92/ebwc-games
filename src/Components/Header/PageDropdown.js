@@ -8,33 +8,30 @@ export const PageDropdown = () => {
 
     const linkProps = [
         {
-            url: "games.html",
+            id: 1,
+            url: 'games',
             icon: 'gamepad',
             text: 'GAMES'
         },
         {
-            url: "3d_models.html",
+            id: 2,
+            url: '3d_models',
             icon: 'fighter-jet',
             text: '3D MODELS'
-        },
-        {
-            url: "links.html",
-            icon: 'link',
-            text: 'LINKS'
         }
     ]
 
-    const pageLinks = linkProps.map(linkProp => <PageLinks linkProps={linkProp} />);
+    const pageLinks = linkProps.map(linkProp => <PageLinks key={linkProp.id} linkProps={linkProp} />);
 
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = () => setIsOpen(!isOpen);
     const menuClass = `dropdown-menu${isOpen ? ' show' : ''} dropdown-menu-right bg-color-one`;
 
     return (
-        <div className='text-right col-3 col-sm-6 pr-5'>
+        <div className='text-right col-3 col-sm-6 pr-4' style={{ marginTop: '3px' }}>
 
             <div className='dropdown' onClick={toggleOpen} >
-                <button className='btn btn-secondary btn-sm'>
+                <button className='btn btn-secondary'>
                     <FontAwesomeIcon icon='bars' />
                 </button>
                 <div className={menuClass}>

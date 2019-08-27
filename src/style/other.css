@@ -3,7 +3,29 @@
     text-decoration: none;
   }
 
-  .sticky {
+.sticky-header {
     position: sticky;
     top: 0;
-  }
+    z-index: 1;
+}
+
+.gamelist {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  background: gray;
+  padding-left: 40px;
+}
+
+.react-tooltip-lite {
+  background: gray;
+  color: white;
+  border-radius: 20%;
+  box-shadow: 0px 0px 10px white;
+  border-color: black;
+  font-weight: 600;
+}
+
+.react-tooltip-lite-arrow {
+  border-color: gray;
+}

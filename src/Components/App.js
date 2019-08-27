@@ -1,30 +1,37 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Header } from './Header/Header';
-import { Content } from './Content/Content';
+import { HomePage } from './Content/HomePage';
+import { Games } from './Content/Games/Games';
+//import { Models } from './Content/Models/Models';
 import { Footer } from './Footer/Footer';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBars,
   faGamepad,
   faFighterJet,
-  faLink,
-  faCopyright
+  faCopyright,
+  faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   faBars,
   faGamepad,
   faFighterJet,
-  faLink,
-  faCopyright
+  faCopyright,
+  faEnvelope
 );
 
 export const App = () => (
-  <div style={{ background: '#36403b' }}>
-    <Header />
-    <Content />
-    <Footer />
-  </div>
+  <BrowserRouter>
+    <div style={{ background: '#36403b' }}>
+      <Header />
+      <Switch>
+        <Route path='/' component={HomePage} exact />
+        <Route path='/games' component={Games} exact />
+      </Switch>
+      <Footer />
+    </div>
+  </BrowserRouter>
 )
