@@ -32,9 +32,9 @@ export const App = () => (
       <Switch>
         <Route path='/' component={HomePage} exact />
         <Route path='/games' component={Games} exact />
-        <Route path='/games/:id' component={GameContent} />
+        <Route path='/games/:game_id' component={GameContent} />
         <Route path='/3d_models' component={Models} exact />
-        <Route path='/3d_models/:id' component={ModelContent} />
+        <Route path='/3d_models/:model_id' component={ModelContent} />
       </Switch>
       <Footer />
     </div>

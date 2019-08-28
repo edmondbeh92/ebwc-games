@@ -54,11 +54,10 @@ export const Models = () => {
         setModelList(data);
     }
 
-
     return (
         <div className='row'>
             <ModelList data={modelList} />
-            <ModelContent data={modelList[1]} />
+            <ModelContent data={chosen} />
         </div>
     )
 }

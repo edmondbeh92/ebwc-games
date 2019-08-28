@@ -39,7 +39,7 @@ export const Games = () => {
     const games_id_name = gameList.map(game => ({ id: game.id, name: game.name }));
 
     return (
-        <div>
+        <div className='row'>
             <GameList ids_names={games_id_name} />
             <GameContent selectedGame={gameList[0]} />
         </div>
