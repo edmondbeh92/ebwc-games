@@ -5,6 +5,7 @@ import { HomePage } from './Content/HomePage';
 import { Games } from './Content/Games/Games';
 import { GameContent } from './Content/Games/GameContent';
 import { Models } from './Content/Models/Models';
+import { ModelContent } from './Content/Models/ModelContent';
 import { Footer } from './Footer/Footer';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -33,6 +34,7 @@ export const App = () => (
         <Route path='/games' component={Games} exact />
         <Route path='/games/:id' component={GameContent} />
         <Route path='/3d_models' component={Models} exact />
+        <Route path='/3d_models/:id' component={ModelContent} />
       </Switch>
       <Footer />
     </div>
