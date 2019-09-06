@@ -27,7 +27,7 @@ library.add(
 
 export const App = () => (
   <BrowserRouter>
-    <div style={{ background: '#36403b' }}>
+    <div class='bg-main'>
       <Header />
       <Switch>
         <Route path='/' component={HomePage} exact />
@@ -38,5 +38,5 @@ export const App = () => (
       </Switch>
       <Footer />
     </div>
-  </BrowserRouter>
+  </BrowserRouter >
 )
