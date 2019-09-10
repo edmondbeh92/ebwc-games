@@ -26,6 +26,10 @@
     background-color: #D1E8E2;
 }
 
+.bg-sidebar {
+    background-image: linear-gradient(to right, #303c3c, #072042);
+}
+
 .bg-main {
     background-image: linear-gradient(#303c3c, #072042);
     min-height: 100vh;

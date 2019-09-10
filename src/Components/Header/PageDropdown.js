@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { PageLinks } from './PageLinks'
+import { Footer } from '../Footer/Footer'
 import '../../style/color.css';
 import '../../style/other.css';
+import '../../style/sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const PageDropdown = () => {
@@ -25,20 +27,27 @@ export const PageDropdown = () => {
 
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = () => setIsOpen(!isOpen);
-    const menuClass = `dropdown-menu${isOpen ? ' show' : ''} dropdown-menu-right bg-color-one`;
+    const menuClass = `d-flex flex-column dropdown-close ${isOpen ? 'dropdown-sidebar' : ''} bg-sidebar`;
 
     return (
-        <div className='text-right col-3 col-sm-6 pr-4' style={{ marginTop: '3px' }}>
-
-            <div className='dropdown' onClick={toggleOpen} >
-                <button className='btn btn-secondary'>
-                    <FontAwesomeIcon icon='bars' />
-                </button>
-                <div className={menuClass}>
-                    {pageLinks}
+        <>
+            <div className='text-right col-3 col-sm-6 pr-4'>
+                <div onClick={toggleOpen}>
+                    <button className='dropdown-btn'>
+                        <FontAwesomeIcon icon='bars' />
+                    </button>
                 </div>
             </div>
 
-        </div>
+            <div className={menuClass}>
+                <div className='text-right pt-2 px-4' onClick={toggleOpen}>
+                    <button className='close-btn'>
+                        <FontAwesomeIcon icon='times' />
+                    </button>
+                </div>
+                {pageLinks}
+                <hr />
+            </div>
+        </>
     )
 }

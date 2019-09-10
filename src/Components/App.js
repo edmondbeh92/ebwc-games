@@ -15,6 +15,7 @@ import {
   faFighterJet,
   faCopyright,
   faEnvelope,
+  faTimes
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -22,7 +23,8 @@ library.add(
   faGamepad,
   faFighterJet,
   faCopyright,
-  faEnvelope
+  faEnvelope,
+  faTimes
 );
 
 export const App = () => (
@@ -36,7 +38,6 @@ export const App = () => (
         <Route path='/3d_models' component={Models} exact />
         <Route path='/3d_models/:model_id' component={ModelContent} />
       </Switch>
-      <Footer />
     </div>
   </BrowserRouter >
 )
