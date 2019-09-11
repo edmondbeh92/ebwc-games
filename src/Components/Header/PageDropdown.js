@@ -27,7 +27,7 @@ export const PageDropdown = () => {
 
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = () => setIsOpen(!isOpen);
-    const menuClass = `d-flex flex-column dropdown-close ${isOpen ? 'dropdown-sidebar' : ''} bg-sidebar`;
+    const menuClass = `dropdown-close ${isOpen ? 'dropdown-sidebar' : ''} bg-sidebar`;
 
     return (
         <>
@@ -45,10 +45,11 @@ export const PageDropdown = () => {
                         <FontAwesomeIcon icon='times' />
                     </button>
                 </div>
-                <div className='w-100'>
+                <div className='my-4'>
                     {pageLinks}
-                    <hr className='hr-sidebar' />
                 </div>
+                <hr className='hr-sidebar' />
+                <Footer />
             </div>
         </>
     )

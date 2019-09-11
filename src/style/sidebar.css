@@ -2,14 +2,14 @@
     position: fixed;
     height: 100vh;
     top: 0;
-    right: 0;
-    width: 0;
+    right: -50vw;
+    width: 50vw;
     z-index: 10;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 .dropdown-sidebar {
-    width: 40vw;
+    right: 0;
 }
 
 .dropdown-btn {
@@ -48,6 +48,7 @@
 
 .page-link {
     background: transparent;
+    color: #eaeff9;
     border: 0;
     text-decoration: none;
     transition: 0.2s;
@@ -55,9 +56,7 @@
 
 .page-link:hover {
     background: transparent;
-    color:white;
-    font-weight: 1000;
-    text-decoration: none;
+    color: white;
 }
 
 .hr-sidebar {
@@ -65,10 +64,22 @@
     margin-right: 30px;
     background: white;
     height: 0.2px;
+    width: auto;
 }
 
 @media only screen and (max-width: 500px) {
+
+    .dropdown-close {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    z-index: 10;
+    transition: 0.5s;
+    }
+
     .dropdown-sidebar {
-        width: 100%;
+        right: 0;
     }
 }

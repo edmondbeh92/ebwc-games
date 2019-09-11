@@ -48,7 +48,7 @@ export const Footer = () => {
     const links = externalLinks.map(externalLink => <WebLinks key={externalLink.id} props={externalLink} />)
 
     return (
-        <div className='bg-color-one pt-3 mt-5 footer' >
+        <div className='bg-color-one pt-3 mt-auto footer' >
             <footer className='container text-center text-gray pt-3 pb-3 footer-inner'>
                 <div className='d-flex flex-row justify-content-center flex-wrap'>
                     {links}
