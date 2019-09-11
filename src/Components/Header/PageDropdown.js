@@ -40,13 +40,15 @@ export const PageDropdown = () => {
             </div>
 
             <div className={menuClass}>
-                <div className='text-right pt-2 px-4' onClick={toggleOpen}>
+                <div className='text-right pt-2 px-4 w-100' onClick={toggleOpen}>
                     <button className='close-btn'>
                         <FontAwesomeIcon icon='times' />
                     </button>
                 </div>
-                {pageLinks}
-                <hr />
+                <div className='w-100'>
+                    {pageLinks}
+                    <hr className='hr-sidebar' />
+                </div>
             </div>
         </>
     )
