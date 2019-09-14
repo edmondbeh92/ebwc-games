@@ -5,7 +5,8 @@ import '../../../style/image.css';
 export const ModelCard = props => {
 
     const [hover, setHover] = useState(false);
-    const cardHover = `card mt-5 ${hover ? 'card-hover' : ''}`;
+    const cardHover = `card text-link ${hover ? 'card-hover' : ''}`;
+    const cardText = `card-size ${hover ? 'card-text' : ''}`
 
     return (
         <Link to={`/3d_models/${props.data.title}`}
@@ -16,9 +17,9 @@ export const ModelCard = props => {
                 src={props.data.thumbnail_url}
                 alt='model-image'
                 style={{ borderTopLeftRadius: '20px', borderTopRightRadius: '20px', width: '100%' }} />
-            <div className='card-size text-center'>
-                <h5 className='pt-2'><b>{props.data.title}</b></h5>
-            </div>
+            <h5 className={cardText}>
+                <b className={cardText}>{props.data.title}</b>
+            </h5>
         </Link>
     )
 }

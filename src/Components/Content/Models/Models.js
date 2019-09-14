@@ -55,7 +55,7 @@ export const Models = () => {
     }
 
     return (
-        <div className='row'>
+        <div>
             <ModelList data={modelList} />
             <ModelContent data={chosen} />
         </div>
