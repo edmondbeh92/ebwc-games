@@ -1,30 +1,35 @@
 import React from 'react';
 import '../../../style/image.css';
+import '../../../style/color.css';
+import '../../../style/other.css';
 
 export const GameContent = props => {
 
     const images = props.selectedGame.img_url.map(image => <img src={image} alt='x' className='game-images' />);
 
     return (
-        <div className='text-center pt-2 col-12 col-sm-9 content'>
-            <h1 className='text-light'>{props.selectedGame.name}</h1>
-            <p className='text-light'>Made with {props.selectedGame.engine}</p>
+        <div className='content'>
+            <h1 className='text-center'>{props.selectedGame.name}</h1>
+            <p className='text-warning text-center'>Made with {props.selectedGame.engine}</p>
+            <hr /><br />
             <img src={props.selectedGame.splash_url} alt='x' className='splash-img' />
 
-            <h4 className='text-light pt-5 pb-4'>
+            <h4 className='text-gray pt-5 pb-4'>
                 {props.selectedGame.description}
-                <br />
-                <a
-                    href={props.selectedGame.game_link}
-                    target="_blank"
-                    alt='x'
-                    rel="noopener noreferrer"
-                    className='btn btn-secondary btn-sm my-3'>
-                    <strong>Play</strong>
-                </a>
+                <br /><br />
+                <div className='text-center'>
+                    <a
+                        href={props.selectedGame.game_link}
+                        target="_blank"
+                        alt='x'
+                        rel="noopener noreferrer"
+                        className='btn btn-secondary my-3'>
+                        <strong>Play</strong>
+                    </a>
+                </div>
             </h4>
 
-            <div className="container_iframe">
+            <div className="container_iframe mb-5">
                 <div className="iframe_wrapper">
                     <iframe className="iframe_content" title="CR_video" src={props.selectedGame.youtube_link}
                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -33,7 +38,9 @@ export const GameContent = props => {
             </div>
 
             <div>
-                <h3>GALLERY:</h3>
+                <hr />
+                <h3 className='text-gray py-2'>Gallery</h3>
+                <hr />
                 {images}
             </div>
         </div>

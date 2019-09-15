@@ -6,11 +6,11 @@ export const ModelContent = props => {
 
     if (props.data) {
         return (
-            <div className='text-center text-light pt-2 content col-12 col-sm-9'>
-                <h3>
+            <div className='content'>
+                <h3 className='text-center'>
                     {props.data.title}
                 </h3>
-                <div className='my-4'>
+                <div className='text-center my-4'>
                     {renderHTML(props.data.html)}
                 </div>
             </div>

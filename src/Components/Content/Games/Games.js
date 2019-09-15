@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { GameList } from './GameList';
 import { GameContent } from './GameContent';
-import { Link } from 'react-router-dom';
 import '../../../style/iframe.css';
 
 export const Games = () => {
 
-    //const [selectGame, setSelectGame] = useState(null);
+    const [chosen, setChosen] = useState(null);
 
     const gameList = [
         {
@@ -39,7 +38,7 @@ export const Games = () => {
     const games_id_name = gameList.map(game => ({ id: game.id, name: game.name }));
 
     return (
-        <div className='row'>
+        <div>
             <GameList ids_names={games_id_name} />
             <GameContent selectedGame={gameList[0]} />
         </div>
