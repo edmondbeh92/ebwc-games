@@ -1,9 +1,8 @@
 import React from 'react';
-import { Footer } from '../Footer/Footer'
 
 export const HomePage = () => (
 
-    <div className='container text-center'>
+    <div className='container text-center px-4'>
         <img src={require("../../images/ebwc_weblogo.png")} alt="EBWC_Logo" className='ebwc-img' />
         <div className='text-justify text-color-three py-3'>
             <h5 className='mb-5 pb-5'>

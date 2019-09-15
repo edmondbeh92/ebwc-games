@@ -61,6 +61,11 @@
   border-color: gray;
 }
 
+hr {
+  background: #D1E8E2;
+  width: 100%;
+}
+
 @media only screen and (orientation: portrait) {
   .list {
     flex-direction: row;

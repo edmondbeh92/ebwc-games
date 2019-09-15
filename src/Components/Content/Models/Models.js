@@ -7,6 +7,7 @@ import '../../../style/iframe.css';
 export const Models = () => {
 
     const [modelList, setModelList] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     const [chosen, setChosen] = useState(null);
 
     const model_list = [
@@ -52,11 +53,12 @@ export const Models = () => {
             )
         )
         setModelList(data);
+        setIsLoading(false);
     }
 
     return (
         <div>
-            <ModelList data={modelList} />
+            <ModelList data={modelList} loading={isLoading} />
             <ModelContent data={chosen} />
         </div>
     )

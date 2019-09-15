@@ -6,7 +6,6 @@ import { Games } from './Content/Games/Games';
 import { GameContent } from './Content/Games/GameContent';
 import { Models } from './Content/Models/Models';
 import { ModelContent } from './Content/Models/ModelContent';
-import { Footer } from './Footer/Footer';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
