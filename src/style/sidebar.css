@@ -1,0 +1,113 @@
+.dropdown-close {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: -50vw;
+    width: 50vw;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.dropdown-sidebar {
+    right: 0;
+}
+
+.dropdown-btn {
+    background: transparent;
+    border: 0;
+    color: #eaeff9;
+    font-size: 30px;
+    outline: 0;
+    transition: 0.2s;
+}
+
+.dropdown-btn:hover {
+    color: white;
+}
+
+.dropdown-btn:focus {
+    outline: 0;
+}
+
+.close-btn {
+    background: transparent;
+    border: 0;
+    color: #eaeff9;
+    font-size: 30px;
+    outline: 0;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    color: white;
+}
+
+.close-btn:focus {
+    outline: 0;
+}
+
+.page-link {
+    background: transparent;
+    color: #eaeff9;
+    border: 0;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.page-link:hover {
+    background: transparent;
+    color: white;
+}
+
+.hr-sidebar {
+    margin-left: 30px;
+    margin-right: 30px;
+    background: white;
+    height: 0.2px;
+    width: auto;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  padding-left: 8px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .dropdown-close {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    z-index: 10;
+    transition: 0.5s;
+    }
+
+    .dropdown-sidebar {
+        right: 0;
+    }
+}

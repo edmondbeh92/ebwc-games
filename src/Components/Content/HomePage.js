@@ -2,11 +2,10 @@ import React from 'react';
 
 export const HomePage = () => (
 
-    <div className='container text-center'>
+    <div className='container text-center px-4'>
         <img src={require("../../images/ebwc_weblogo.png")} alt="EBWC_Logo" className='ebwc-img' />
-        <hr />
         <div className='text-justify text-color-three py-3'>
-            <h4>
+            <h5 className='mb-5 pb-5'>
                 Hello there! EBWC Games is maintained by me, a one man hobbyist game developer.
                 I like arcade style shooter such as shmups and top-down shooters. I also like games that
                 focus on exploration and satisfying rewards, including Metroidvania.
@@ -20,8 +19,7 @@ export const HomePage = () => (
                 <br /> <br />
 
                 Thank you for visiting here!
-            </h4>
+            </h5>
         </div>
     </div>
-
 )

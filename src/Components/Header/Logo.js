@@ -17,7 +17,7 @@ export const Logo = () => {
             <h3>
                 <Link to="/" className='text-gray text-link'>
                     <img src={require("../../images/ebwc_weblogo.png")} alt="EBWC_Icon" className={logoClass} />
-                    <span className='pl-1'>EBWC Games</span>
+                    <span className='pl-1'>EBWC</span>
                 </Link>
             </h3>
         </div >

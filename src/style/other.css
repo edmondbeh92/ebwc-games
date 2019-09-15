@@ -6,28 +6,46 @@
 .sticky-header {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .footer {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .list {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to left, #303c3c, #072042);
   position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 25vw;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 3vw;
+  padding-right: 3vw;
   z-index: 1;
-  background: #116466;
-  padding-left: 50px;
-  padding-bottom: 400px;
-  border-color: black;
-  overflow: auto;
+  overflow-y: scroll;
 }
 
 .content {
-  margin-left: 300px;
-  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  color: white;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  width: 75vw;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  z-index: 1;
+  overflow-y: scroll;
 }
 
 .react-tooltip-lite {
@@ -41,4 +59,37 @@
 
 .react-tooltip-lite-arrow {
   border-color: gray;
+}
+
+hr {
+  background: #D1E8E2;
+  width: 100%;
+}
+
+@media only screen and (orientation: portrait) {
+  .list {
+    flex-direction: row;
+    background-image: linear-gradient(#303c3c, #072042);
+    height: 35vh;
+    top: initial;
+    left: 0px;
+    bottom: 0;
+    width: 100vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+
+  .content {
+    height: 65vh;
+    width: 100vw;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    z-index: 1;
+  }
 }

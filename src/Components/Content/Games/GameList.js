@@ -7,7 +7,7 @@ export const GameList = props => {
     const gameTags = props.ids_names.map(id_name => <GameListTab key={id_name.id} id={id_name.id} name={id_name.name} />)
 
     return (
-        <div className='d-flex flex-column list'>
+        <div className='list'>
             {gameTags}
         </div>
     )
