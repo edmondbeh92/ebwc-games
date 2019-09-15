@@ -9,12 +9,11 @@ export const GameContent = props => {
 
     return (
         <div className='content'>
-            <h1 className='text-center'>{props.selectedGame.name}</h1>
+            <img src={props.selectedGame.splash_url} alt='x' className='splash-img' />
             <p className='text-warning text-center'>Made with {props.selectedGame.engine}</p>
             <hr /><br />
-            <img src={props.selectedGame.splash_url} alt='x' className='splash-img' />
 
-            <h4 className='text-gray pt-5 pb-4'>
+            <h5 className='text-color-three pb-4'>
                 {props.selectedGame.description}
                 <br /><br />
                 <div className='text-center'>
@@ -23,11 +22,11 @@ export const GameContent = props => {
                         target="_blank"
                         alt='x'
                         rel="noopener noreferrer"
-                        className='btn btn-secondary my-3'>
-                        <strong>Play</strong>
+                        className='btn-play'>
+                        <strong>PLAY</strong>
                     </a>
                 </div>
-            </h4>
+            </h5>
 
             <div className="container_iframe mb-5">
                 <div className="iframe_wrapper">
@@ -39,7 +38,7 @@ export const GameContent = props => {
 
             <div>
                 <hr />
-                <h3 className='text-gray py-2'>Gallery</h3>
+                <h3 className='text-color-three py-2'>Gallery</h3>
                 <hr />
                 {images}
             </div>

@@ -40,6 +40,8 @@
     border-radius: 10px;
     border: 1px solid white;
     box-shadow: 0 0 5px 2px gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .game-images {

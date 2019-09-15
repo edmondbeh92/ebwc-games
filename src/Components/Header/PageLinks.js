@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export const PageLinks = props => (
 
     <h5 className='text-left px-4'>
-        <Link to={`/${props.linkProps.url}`} className='page-link'>
+        <Link to={`/${props.linkProps.url}`} className='page-link' onClick={props.toggleOpen}>
             <span className='text-warning'>
                 <FontAwesomeIcon icon={props.linkProps.icon} />
             </span>

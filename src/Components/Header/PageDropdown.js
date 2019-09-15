@@ -23,11 +23,12 @@ export const PageDropdown = () => {
         }
     ]
 
-    const pageLinks = linkProps.map(linkProp => <PageLinks key={linkProp.id} linkProps={linkProp} />);
 
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = () => setIsOpen(!isOpen);
     const menuClass = `dropdown-close ${isOpen ? 'dropdown-sidebar' : ''} bg-sidebar`;
+
+    const pageLinks = linkProps.map(linkProp => <PageLinks key={linkProp.id} linkProps={linkProp} toggleOpen={toggleOpen} />);
 
     return (
         <>
@@ -39,8 +40,8 @@ export const PageDropdown = () => {
                 </div>
             </div>
 
-            <div className={menuClass}>
-                <div className='text-right pt-2 px-4 w-100' onClick={toggleOpen}>
+            <div className={menuClass} onClick={toggleOpen}>
+                <div className='text-right pt-2 px-4 w-100' >
                     <button className='close-btn'>
                         <FontAwesomeIcon icon='times' />
                     </button>

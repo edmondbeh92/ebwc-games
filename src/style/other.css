@@ -61,6 +61,26 @@
   border-color: gray;
 }
 
+.btn-play {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: linear-gradient(to right, #1ba0a2, #456abb);
+  color: #c4dcd6;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+
+.btn-play:hover {
+  box-shadow: 0 0 4px 2px white;
+  color: white;
+  text-decoration: none;
+}
+
 hr {
   background: #D1E8E2;
   width: 100%;
