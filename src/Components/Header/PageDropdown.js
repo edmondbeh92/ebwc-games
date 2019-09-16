@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import { PageLinks } from './PageLinks'
-import { Footer } from '../Footer/Footer'
+import React, { useContext } from 'react';
+import { PageLinks } from './PageLinks';
+import { Footer } from '../Footer/Footer';
+import { SidebarContext } from './Header';
 import '../../style/color.css';
 import '../../style/other.css';
 import '../../style/sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 export const PageDropdown = () => {
 
@@ -23,9 +25,7 @@ export const PageDropdown = () => {
         }
     ]
 
-
-    const [isOpen, setIsOpen] = useState(false);
-    const toggleOpen = () => setIsOpen(!isOpen);
+    const { isOpen, toggleOpen } = useContext(SidebarContext);
     const menuClass = `dropdown-close ${isOpen ? 'dropdown-sidebar' : ''} bg-sidebar`;
 
     const pageLinks = linkProps.map(linkProp => <PageLinks key={linkProp.id} linkProps={linkProp} toggleOpen={toggleOpen} />);
