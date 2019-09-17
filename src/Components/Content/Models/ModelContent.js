@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import renderHTML from 'react-render-html';
 import '../../../style/other.css';
 
@@ -21,9 +21,6 @@ export const ModelContent = props => {
             <div className='content'>
                 <h3>WELCOME TO THE MODEL PAGE!</h3>
                 <hr />
-                <div>
-
-                </div>
             </div>
         )
     }

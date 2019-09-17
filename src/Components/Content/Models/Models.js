@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import { ModelList } from './ModelList';
 import { ModelContent } from './ModelContent';
 import '../../../style/iframe.css';
@@ -8,7 +9,6 @@ export const Models = () => {
 
     const [modelList, setModelList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [chosen, setChosen] = useState(null);
 
     const model_list = [
         [
@@ -59,7 +59,7 @@ export const Models = () => {
     return (
         <div>
             <ModelList data={modelList} loading={isLoading} />
-            <ModelContent data={chosen} />
+            <Route path={'/3d_models/:model_title'} component={ModelContent} exact />
         </div>
     )
 }
