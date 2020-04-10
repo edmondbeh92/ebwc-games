@@ -1,12 +1,14 @@
-.text-link:hover {
-    color: white;
-    text-decoration: none;
-  }
+a {
+  outline: 0;
+  text-decoration: none !important;
 
-.sticky-header {
-    position: sticky;
-    top: 0;
-    z-index: 2;
+  color: white;
+  transition: 0.2s;
+
+  &:hover {
+    color: #d6d6d6;
+    transform: scale(1.05);
+  }
 }
 
 .footer {
@@ -62,7 +64,7 @@
 }
 
 hr {
-  background: #D1E8E2;
+  background: #d1e8e2;
   width: 100%;
 }
 
@@ -91,5 +93,34 @@ hr {
     padding-left: 6vw;
     padding-right: 6vw;
     z-index: 1;
+  }
+}
+
+//
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  padding-left: 8px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
