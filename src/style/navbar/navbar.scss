@@ -1,0 +1,39 @@
+.sticky-navbar {
+  background-image: linear-gradient(black, #ffffff00);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.ebwc-logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: black;
+  padding: 5px 0 4px 2px;
+  border: 1px solid #e02304;
+  margin-bottom: 3px;
+}
+
+.logo-glow {
+  animation: glowing 1s linear infinite alternate;
+}
+
+@keyframes glowing {
+  100% {
+    box-shadow: 0 0 10px red, 0 0 20px #9d3d29, 0 0 30px #9d3d29, 0 0 10px white;
+  }
+}
+
+.logo-font {
+  font-size: 35px;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
