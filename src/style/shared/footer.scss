@@ -1,0 +1,52 @@
+.footer {
+  position: relative;
+  background: black;
+  padding: 50px 0;
+
+  .web-links-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    .icon {
+      font-size: 40px;
+      line-height: 44px;
+      margin: 0 15px;
+    }
+
+    img {
+      width: 60px;
+      padding-bottom: 2px;
+    }
+
+    svg,
+    img {
+      transition: 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .email {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+
+    .text-warning {
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  }
+
+  .copyright {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+}

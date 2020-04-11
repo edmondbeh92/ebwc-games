@@ -1,4 +1,4 @@
-export const linkProps = [
+const linkProps = [
   {
     id: 1,
     url: "games",
@@ -12,3 +12,5 @@ export const linkProps = [
     text: "3D MODELS",
   },
 ];
+
+export default linkProps;

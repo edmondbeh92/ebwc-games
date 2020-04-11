@@ -1,19 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 .bebas-font {
   font-family: "Bebas Neue", cursive;
 }
 
+.bg-main {
+  background-image: linear-gradient(165deg, #092e2e, #04152b);
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+img {
+  object-fit: cover;
+}
+
+a {
+  outline: 0;
+  text-decoration: none !important;
+
+  color: white;
+  transition: 0.1s;
+
+  &:hover {
+    color: #d6d6d6;
+    transform: scale(1.05) !important;
+  }
+}
+
 body {
+  color: white;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }

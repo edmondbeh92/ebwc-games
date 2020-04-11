@@ -6,7 +6,7 @@ const NavLinks = ({ linkProps }) => (
   <div className="drawer-link-wrapper">
     <Link to={`/${linkProps.url}`}>
       <FontAwesomeIcon className="text-warning" icon={linkProps.icon} />
-      <span className="">{linkProps.text}</span>
+      <span className="bebas-font navbar-font">{linkProps.text}</span>
     </Link>
   </div>
 );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NavLinks from "./NavLinks";
-import { linkProps } from "../../data/link_props";
+import linkProps from "../../data/link_props";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../style/navbar/drawer.scss";
 
@@ -8,7 +8,7 @@ const PageDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = () => setIsOpen(!isOpen);
 
-  const pageLinks = linkProps.map((linkProp) => (
+  const navLinks = linkProps.map((linkProp) => (
     <NavLinks key={linkProp.id} linkProps={linkProp} />
   ));
 
@@ -16,7 +16,7 @@ const PageDrawer = () => {
 
   return (
     <>
-      <div className="d-flex align-items-center no-drawer">{pageLinks}</div>
+      <div className="d-flex align-items-center no-drawer">{navLinks}</div>
 
       <button className="drawer-open-btn" onClick={toggleOpen}>
         <FontAwesomeIcon icon="bars" />
@@ -29,7 +29,7 @@ const PageDrawer = () => {
           </button>
         </div>
 
-        {pageLinks}
+        {navLinks}
       </div>
     </>
   );

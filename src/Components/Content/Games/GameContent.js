@@ -1,6 +1,5 @@
 import React from "react";
 import "../../../style/image.scss";
-import "../../../style/color.scss";
 import "../../../style/other.scss";
 
 export const GameContent = (props) => {
