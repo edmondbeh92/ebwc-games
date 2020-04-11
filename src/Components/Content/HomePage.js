@@ -1,25 +1,28 @@
-import React from 'react';
+import React from "react";
+import "../../style/homepage.scss";
 
-export const HomePage = () => (
+const HomePage = () => (
+  <div className="container text-center">
+    <img
+      src={require("../../images/ebwc_weblogo.png")}
+      alt="EBWC_Image"
+      className="ebwc-img"
+    />
 
-    <div className='container text-center px-4'>
-        <img src={require("../../images/ebwc_weblogo.png")} alt="EBWC_Logo" className='ebwc-img' />
-        <div className='text-justify text-color-three py-3'>
-            <h5 className='mb-5 pb-5'>
-                Hello there! EBWC Games is maintained by me, a one man hobbyist game developer.
-                I like arcade style shooter such as shmups and top-down shooters. I also like games that
-                focus on exploration and satisfying rewards, including Metroidvania.
+    <p>
+      Hello there! EBWC Games is maintained by me, a one man hobbyist game
+      developer. I like arcade style shooter such as shmups and top-down
+      shooters. I also like games that focus on exploration and satisfying
+      rewards, including Metroidvania.
+      <br /> <br />I had tried making a 2D vertical shmup called
+      <strong> Celestial Raid</strong>. Feel free to play it and feedback are
+      very welcomed! I am also currently taking my time to make a 3D top-down
+      shooter and learning 3D modelling at the same time, thus you can see some
+      of my test models.
+      <br /> <br />
+      Thank you for visiting here!
+    </p>
+  </div>
+);
 
-                <br /> <br />
-
-                I had tried making a 2D vertical shmup called <strong className='text-light'>Celestial Raid</strong>.
-                Feel free to play it and feedback are very welcomed! I am also currently taking my time to make a 3D top-down shooter and
-                learning 3D modelling at the same time, thus you can see some of my test models.
-
-                <br /> <br />
-
-                Thank you for visiting here!
-            </h5>
-        </div>
-    </div>
-)
+export default HomePage;

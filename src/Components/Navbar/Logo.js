@@ -18,7 +18,7 @@ const Logo = () => {
         alt="EBWC_Logo"
         className={logoClass}
       />
-      <span className="bebas-font logo-font text-link">HOME</span>
+      <span className="bebas-font navbar-font text-link">HOME</span>
     </Link>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ModelList } from "./ModelList";
 import { ModelContent } from "./ModelContent";
-import { model_list } from "../../../data/model_list";
+import models_api from "../../../data/models_api";
 import "../../../style/iframe.scss";
 
 export const Models = () => {
@@ -9,7 +9,7 @@ export const Models = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [chosen, setChosen] = useState(null);
 
-  const MODEL_API =
+  const MODEL_ROOT_API =
     "https://sketchfab.com/oembed?url=https://sketchfab.com/models/";
 
   useEffect(() => {
@@ -18,9 +18,11 @@ export const Models = () => {
 
   const fetchModel = async () => {
     const data = await Promise.all(
-      model_list.map((model) =>
-        fetch(MODEL_API + model.api).then((response) => response.json())
-      )
+      models_api
+        .reverse()
+        .map((api) =>
+          fetch(MODEL_ROOT_API + api).then((response) => response.json())
+        )
     );
     setModelList(data);
     setIsLoading(false);

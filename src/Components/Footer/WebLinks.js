@@ -1,21 +1,22 @@
 import React from "react";
-import Tooltip from "react-tooltip-lite";
-import "../../style/other.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Tooltip from "react-tooltip-lite";
+import "../../style/shared/tooltip.scss";
 
-export const WebLinks = (props) => (
-  <Tooltip content={props.props.tooltip} className="text-light">
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href={props.props.url}
-      data-tip="what"
-    >
-      <FontAwesomeIcon
-        icon={props.props.icon}
-        className="text-gray m-3"
-        style={{ fontSize: "50px" }}
-      />
-    </a>
-  </Tooltip>
-);
+const WebLinks = ({ props: { url, icon, tooltip, image_url } }) => {
+  const renderIcon = icon ? (
+    <FontAwesomeIcon icon={icon} className="icon" />
+  ) : (
+    <img src={image_url} alt="sketchfab_icon" />
+  );
+
+  return (
+    <Tooltip content={tooltip}>
+      <a target="_blank" rel="noopener noreferrer" data-tip="what" href={url}>
+        {renderIcon}
+      </a>
+    </Tooltip>
+  );
+};
+
+export default WebLinks;
