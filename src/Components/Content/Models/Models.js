@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ModelList from "./ModelList";
-import ModelMain from "./ModelMain";
 import ModelContent from "./ModelContent";
 import models_api from "../../../data/models_api";
 import "../../../style/model.scss";
@@ -26,12 +25,12 @@ const Models = () => {
     fetchModel();
   }, []);
 
-  const renderContent = false ? <ModelContent /> : <ModelMain />;
-
   return (
     <section>
       <ModelList data={modelList} loading={isLoading} />
-      <div className="model-content">{renderContent}</div>
+      <div className="model-content">
+        <ModelContent />
+      </div>
     </section>
   );
 };

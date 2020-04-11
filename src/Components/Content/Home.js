@@ -1,7 +1,7 @@
 import React from "react";
 import "../../style/homepage.scss";
 
-const HomePage = () => (
+const Home = () => (
   <section className="home container text-center">
     <img
       src={require("../../images/ebwc_weblogo.png")}
@@ -25,4 +25,4 @@ const HomePage = () => (
   </section>
 );
 
-export default HomePage;
+export default Home;

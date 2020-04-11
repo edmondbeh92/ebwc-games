@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
-import HomePage from "./Content/HomePage";
+import Home from "./Content/Home";
 import { Games } from "./Content/Games/Games";
 import Models from "./Content/Models/Models";
 import "../style/shared/font.scss";
@@ -21,12 +21,17 @@ library.add(faBars, faGamepad, faFighterJet, faCopyright, faEnvelope, faTimes);
 
 const App = () => (
   <BrowserRouter>
-    <main class="bg-main">
+    <main className="bg-main">
       <Navbar />
       <Switch>
-        <Route path="/" component={HomePage} exact />
+        <Route path="/" component={Home} exact />
         <Route path="/games" component={Games} exact />
         <Route path="/3d_models" component={Models} exact />
+        <Route path="/games/:name" component={Games} exact />
+        <Route path="/3d_models/:name" component={Models} exact />
+        <Route
+          render={() => <h2 className="text-center">404: PAGE NOT FOUND!</h2>}
+        />
       </Switch>
     </main>
     <Footer />

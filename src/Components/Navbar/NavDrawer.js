@@ -9,7 +9,11 @@ const PageDrawer = () => {
   const toggleOpen = () => setIsOpen(!isOpen);
 
   const navLinks = linkProps.map((linkProp) => (
-    <NavLinks key={linkProp.id} linkProps={linkProp} toggle={isOpen} />
+    <NavLinks key={linkProp.id} linkProps={linkProp} />
+  ));
+
+  const navLinksInDrawer = linkProps.map((linkProp) => (
+    <NavLinks key={linkProp.id} linkProps={linkProp} toggleOpen={toggleOpen} />
   ));
 
   const drawerClass = `drawer ${isOpen ? "open" : ""}`;
@@ -29,7 +33,7 @@ const PageDrawer = () => {
           </button>
         </div>
 
-        {navLinks}
+        {navLinksInDrawer}
       </div>
     </>
   );
