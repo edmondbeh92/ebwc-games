@@ -2,14 +2,14 @@ import React from "react";
 import "../../style/homepage.scss";
 
 const HomePage = () => (
-  <div className="container text-center">
+  <section className="home container text-center">
     <img
       src={require("../../images/ebwc_weblogo.png")}
       alt="EBWC_Image"
       className="ebwc-img"
     />
 
-    <p>
+    <p className="text-justify">
       Hello there! EBWC Games is maintained by me, a one man hobbyist game
       developer. I like arcade style shooter such as shmups and top-down
       shooters. I also like games that focus on exploration and satisfying
@@ -22,7 +22,7 @@ const HomePage = () => (
       <br /> <br />
       Thank you for visiting here!
     </p>
-  </div>
+  </section>
 );
 
 export default HomePage;

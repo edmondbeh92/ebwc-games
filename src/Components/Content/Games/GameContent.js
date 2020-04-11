@@ -1,6 +1,6 @@
 import React from "react";
-import "../../../style/image.scss";
-import "../../../style/other.scss";
+// import "../../../style/image.scss";
+// import "../../../style/other.scss";
 
 export const GameContent = (props) => {
   const images = props.selectedGame.img_url.map((image) => (

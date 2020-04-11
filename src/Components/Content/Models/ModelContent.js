@@ -1,22 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import renderHTML from "react-render-html";
-import "../../../style/other.scss";
+import "../../../style/iframe.scss";
 
-export const ModelContent = (props) => {
-  if (props.data) {
-    return (
-      <div className="content">
-        <h3 className="text-center">{props.data.title}</h3>
-        <div className="text-center my-4">{renderHTML(props.data.html)}</div>
-      </div>
-    );
-  } else {
-    return (
-      <div className="content">
-        <h3>WELCOME TO THE MODEL PAGE!</h3>
-        <hr />
-        <div></div>
-      </div>
-    );
-  }
+const ModelContent = () => {
+  return (
+    <>
+      <h3 className="text-center">abc </h3>
+      {/* <div className="text-center my-4">{renderHTML(data.html)}</div> */}
+    </>
+  );
 };
+
+export default ModelContent;

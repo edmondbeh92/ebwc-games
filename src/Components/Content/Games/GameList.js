@@ -1,6 +1,6 @@
 import React from "react";
 import { GameListTab } from "./GameListTab";
-import "../../../style/other.scss";
+// import "../../../style/other.scss";
 
 export const GameList = (props) => {
   const gameTags = props.ids_names.map((id_name) => (
