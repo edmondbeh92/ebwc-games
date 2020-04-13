@@ -1,3 +1,6 @@
+$model-scrollbar-width: 20vw;
+$model-scrollbar-height: 300px;
+
 .models-scrollbar {
   display: flex;
   flex-direction: column;
@@ -5,12 +8,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 300px;
+  width: $model-scrollbar-width;
   height: 100vh;
   padding: 80px 30px;
+  z-index: 1;
 
   background-image: linear-gradient(165deg, #092e2e, #04152b);
-  box-shadow: 0 0 15px 2px rgb(182, 196, 204), 0 0 50px 10px rgb(60, 133, 175);
+  animation: glow 2s ease-in-out infinite alternate;
 
   overflow-y: scroll;
 
@@ -44,6 +48,9 @@
       letter-spacing: 1px;
       text-align: center;
       padding: 15px 20px;
+
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
 
     &:hover {
@@ -57,6 +64,25 @@
   padding: 0 30px 0 330px;
 }
 
+iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 100vw - $model-scrollbar-width;
+  height: 100%;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 3px 2px rgb(59, 159, 218), 0 0 20px 3px rgb(127, 163, 184);
+  }
+
+  to {
+    box-shadow: 0 0 7px 3px rgb(182, 196, 204), 0 0 30px 6px rgb(39, 149, 212);
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .models-scrollbar {
     flex-direction: row;
@@ -66,7 +92,7 @@
     left: 0;
 
     width: 100%;
-    height: 300px;
+    height: $model-scrollbar-height;
     padding: 30px;
     padding-top: 100px;
 
@@ -101,7 +127,8 @@
     }
   }
 
-  .model-content {
-    padding: 250px 30px 100px 30px;
+  iframe {
+    padding-top: $model-scrollbar-height;
+    width: 100%;
   }
 }

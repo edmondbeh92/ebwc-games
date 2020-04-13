@@ -11,7 +11,7 @@ const Models = () => {
   const MODEL_ROOT_API =
     "https://sketchfab.com/oembed?url=https://sketchfab.com/models/";
 
-  const fetchModel = async () => {
+  const fetchModels = async () => {
     const data = await Promise.all(
       models_api.map((api) =>
         fetch(MODEL_ROOT_API + api).then((response) => response.json())
@@ -22,15 +22,13 @@ const Models = () => {
   };
 
   useEffect(() => {
-    fetchModel();
+    fetchModels();
   }, []);
 
   return (
     <section>
       <ModelList data={modelList} loading={isLoading} />
-      <div className="model-content">
-        <ModelContent />
-      </div>
+      <ModelContent data={modelList} />
     </section>
   );
 };
