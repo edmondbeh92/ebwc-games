@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const NavLinks = ({ linkProps, toggleOpen }) => {
+const NavLinks = ({ navLink, toggleOpen }) => {
   return (
     <div className="drawer-link-wrapper">
-      <Link to={`/${linkProps.url}`} onClick={toggleOpen}>
-        <FontAwesomeIcon className="text-warning" icon={linkProps.icon} />
-        <span className="bebas-font navbar-font">{linkProps.text}</span>
+      <Link to={`/${navLink.url}`} onClick={toggleOpen}>
+        <FontAwesomeIcon className="text-warning" icon={navLink.icon} />
+        <span className="bebas-font navbar-font">{navLink.text}</span>
       </Link>
     </div>
   );

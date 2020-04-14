@@ -1,18 +1,18 @@
 import React from "react";
-import WebLinks from "./WebLinks";
-import webLinks from "../../data/web_links";
+import footerLinks from "../../data/footer_links";
+import FooterLinks from "./FooterLinks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../style/shared/footer.scss";
 
 const Footer = () => {
-  const links = webLinks.map((webLink) => (
-    <WebLinks key={webLink.id} props={webLink} />
+  const links = footerLinks.map((footerLink) => (
+    <FooterLinks key={footerLink.id} props={footerLink} />
   ));
 
   return (
     <footer className="footer">
       <div className="container">
-        <div className="web-links-wrapper">{links}</div>
+        <div className="footer-links-wrapper">{links}</div>
 
         <p className="email">
           <span className="text-warning">EMAIL: </span>

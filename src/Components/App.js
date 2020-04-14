@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
-import Footer from "./Footer/Footer";
 import Home from "./Content/Home";
 import { Games } from "./Content/Games/Games";
 import Models from "./Content/Models/Models";
@@ -34,7 +33,6 @@ const App = () => (
         />
       </Switch>
     </main>
-    <Footer />
   </BrowserRouter>
 );
 

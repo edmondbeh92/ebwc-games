@@ -5,7 +5,7 @@ import {
   faItchIo,
 } from "@fortawesome/free-brands-svg-icons";
 
-const webLinks = [
+const footerLinks = [
   {
     id: 1,
     url: "https://www.facebook.com/ebwcgames/",
@@ -39,4 +39,4 @@ const webLinks = [
   },
 ];
 
-export default webLinks;
+export default footerLinks;

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "../../Footer/Footer";
 import { GameList } from "./GameList";
 import { GameContent } from "./GameContent";
 import "../../../style/iframe.scss";
@@ -40,9 +41,12 @@ export const Games = () => {
   }));
 
   return (
-    <div>
-      <GameList ids_names={games_id_name} />
-      <GameContent selectedGame={gameList[0]} />
-    </div>
+    <>
+      <section>
+        <GameList ids_names={games_id_name} />
+        <GameContent selectedGame={gameList[0]} />
+      </section>
+      <Footer />
+    </>
   );
 };

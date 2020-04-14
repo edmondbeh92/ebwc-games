@@ -1,4 +1,4 @@
-const linkProps = [
+const navLinks = [
   {
     id: 1,
     url: "games",
@@ -13,4 +13,4 @@ const linkProps = [
   },
 ];
 
-export default linkProps;
+export default navLinks;

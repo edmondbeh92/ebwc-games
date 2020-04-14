@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Tooltip from "react-tooltip-lite";
 import "../../style/shared/tooltip.scss";
 
-const WebLinks = ({ props: { url, icon, tooltip, image_url } }) => {
+const FooterLinks = ({ props: { url, icon, tooltip, image_url } }) => {
   const renderIcon = icon ? (
     <FontAwesomeIcon icon={icon} className="icon" />
   ) : (
@@ -19,4 +19,4 @@ const WebLinks = ({ props: { url, icon, tooltip, image_url } }) => {
   );
 };
 
-export default WebLinks;
+export default FooterLinks;
