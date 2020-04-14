@@ -1,11 +1,12 @@
 import React from "react";
-import { GameListTab } from "./GameListTab";
-// import "../../../style/other.scss";
+import GameCard from "./GameCard";
 
-export const GameList = (props) => {
-  const gameTags = props.ids_names.map((id_name) => (
-    <GameListTab key={id_name.id} id={id_name.id} name={id_name.name} />
+const GameList = ({ data }) => {
+  const gameTags = data.map((game) => (
+    <GameCard key={game.id} banner={game.banner} name={game.name} />
   ));
 
   return <div className="list">{gameTags}</div>;
 };
+
+export default GameList;

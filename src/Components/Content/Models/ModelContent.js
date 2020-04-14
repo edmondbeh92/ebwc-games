@@ -10,7 +10,10 @@ const ModelContent = ({ data }) => {
   const model_url = model ? model.html.match(selector)[0] : "";
 
   return model ? (
-    <iframe title={model.title} src={model_url} frameBorder="0"></iframe>
+    <>
+      <img src={model.thumbnail_url} alt="" className="model-background" />
+      <iframe title={model.title} src={model_url} frameBorder="0"></iframe>
+    </>
   ) : (
     <div className="text-center">
       <h1>WELCOME TO THE MODEL PAGE!</h1>
