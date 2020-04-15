@@ -14,7 +14,7 @@ const Games = () => {
     <>
       <section>
         <GameList data={games} />
-        {name ? <GameContent game={game} /> : null}
+        <GameContent game={game} />
       </section>
       <Footer />
     </>

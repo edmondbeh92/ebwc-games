@@ -2,9 +2,9 @@ import React from "react";
 import ModelCard from "./ModelCard";
 import "../../../style/shared/loader_ring.scss";
 
-const ModelList = ({ data, loading }) => {
-  const modelTags = data.map((model) => (
-    <ModelCard key={model.title} data={model} />
+const ModelList = ({ models, loading }) => {
+  const modelTags = models.map((model) => (
+    <ModelCard key={model.title} model={model} />
   ));
 
   const renderContent = loading ? (

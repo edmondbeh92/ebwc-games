@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../style/iframe.scss";
+import "../../../style/shared/iframe.scss";
 
 const GameContent = ({ game }) => {
   const {
@@ -16,7 +16,7 @@ const GameContent = ({ game }) => {
     <img src={image} alt={image} className="game-image" />
   ));
 
-  return (
+  const gameContent = (
     <div className="content">
       <h1 className="text-center">{name}</h1>
       <p className="text-warning text-center">Made with {engine}</p>
@@ -62,6 +62,8 @@ const GameContent = ({ game }) => {
       </div>
     </div>
   );
+
+  return game ? gameContent : <h1>Nothing here</h1>;
 };
 
 export default GameContent;

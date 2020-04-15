@@ -1,12 +1,8 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 
 const selector = /http.*embed/g;
 
-const ModelContent = ({ data }) => {
-  const { name } = useParams();
-
-  const model = data.find((el) => el.title === name);
+const ModelContent = ({ model }) => {
   const model_url = model ? model.html.match(selector)[0] : "";
 
   return model ? (

@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import ModelList from "./ModelList";
 import ModelContent from "./ModelContent";
 import models_api from "../../../data/models_api";
+import { useParams } from "react-router-dom";
 import "../../../style/model.scss";
 
 const Models = () => {
   const [modelList, setModelList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  const { name } = useParams();
+  const model = modelList.find((model) => model.title === name);
 
   const MODEL_ROOT_API =
     "https://sketchfab.com/oembed?url=https://sketchfab.com/models/";
@@ -27,8 +31,8 @@ const Models = () => {
 
   return (
     <section>
-      <ModelList data={modelList} loading={isLoading} />
-      <ModelContent data={modelList} />
+      <ModelList models={modelList} loading={isLoading} />
+      <ModelContent model={model} />
     </section>
   );
 };
