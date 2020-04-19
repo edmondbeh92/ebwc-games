@@ -1,0 +1,20 @@
+.iframe-wrapper {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    margin: auto;
+
+    > div {
+        position: relative;
+        padding-bottom: 56.25%;
+
+        > iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    }
+}

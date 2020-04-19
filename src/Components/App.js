@@ -1,12 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
-import HomePage from "./Content/HomePage";
-import { Games } from "./Content/Games/Games";
-import { GameContent } from "./Content/Games/GameContent";
-import { Models } from "./Content/Models/Models";
-import { ModelContent } from "./Content/Models/ModelContent";
-import Footer from "./Footer/Footer";
+import Home from "./Content/Home";
+import Games from "./Content/Games/Games";
+import Models from "./Content/Models/Models";
 import "../style/shared/font.scss";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -23,17 +20,19 @@ library.add(faBars, faGamepad, faFighterJet, faCopyright, faEnvelope, faTimes);
 
 const App = () => (
   <BrowserRouter>
-    <div class="bg-main">
+    <main className="bg-main">
       <Navbar />
       <Switch>
-        <Route path="/" component={HomePage} exact />
+        <Route path="/" component={Home} exact />
         <Route path="/games" component={Games} exact />
-        <Route path="/games/:game_id" component={GameContent} />
+        <Route path="/games/:name" component={Games} exact />
         <Route path="/3d_models" component={Models} exact />
-        <Route path="/3d_models/:model_id" component={ModelContent} />
+        <Route path="/3d_models/:name" component={Models} exact />
+        <Route
+          render={() => <h2 className="text-center">404: PAGE NOT FOUND!</h2>}
+        />
       </Switch>
-    </div>
-    <Footer />
+    </main>
   </BrowserRouter>
 );
 

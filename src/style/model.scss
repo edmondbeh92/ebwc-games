@@ -1,0 +1,140 @@
+$model-scrollbar-width: 20vw;
+$model-scrollbar-height: 300px;
+
+.models-scrollbar {
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $model-scrollbar-width;
+  height: 100vh;
+  padding: 80px 30px;
+  z-index: 1;
+
+  background-image: linear-gradient(165deg, #092e2e, #04152b);
+  animation: glow 2s ease-in-out infinite alternate;
+
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+
+  .model-card {
+    $borderRadius: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-image: linear-gradient(#1f4747, #18293d);
+    border-radius: $borderRadius;
+    box-shadow: 0 0 3px white;
+    margin-bottom: 30px;
+
+    transition: 0.2s;
+
+    img {
+      width: 100%;
+      border-top-left-radius: $borderRadius;
+      border-top-right-radius: $borderRadius;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 26px;
+      letter-spacing: 1px;
+      text-align: center;
+      padding: 15px 20px;
+
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+}
+
+.model-home {
+  padding: 0 30px 0 330px;
+}
+
+img.model-background,
+iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 100vw - $model-scrollbar-width;
+  height: 100%;
+}
+
+img.model-background {
+  filter: grayscale(100%) blur(5px);
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 3px 2px rgb(59, 159, 218), 0 0 20px 3px rgb(127, 163, 184);
+  }
+
+  to {
+    box-shadow: 0 0 7px 3px rgb(182, 196, 204), 0 0 30px 6px rgb(39, 149, 212);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .models-scrollbar {
+    flex-direction: row;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: $model-scrollbar-height;
+    padding: 30px;
+    padding-top: 100px;
+
+    .model-card {
+      $card-size: 230px;
+
+      margin: 0 15px;
+      width: $card-size;
+
+      img {
+        width: $card-size;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 20px;
+        padding: 10px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &:last-child::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: -50px;
+        width: 50px;
+        height: 1px;
+      }
+    }
+  }
+
+  img.model-background,
+  iframe {
+    padding-top: $model-scrollbar-height;
+    width: 100%;
+  }
+}

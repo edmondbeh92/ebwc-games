@@ -8,6 +8,10 @@
 .bg-main {
   background-image: linear-gradient(165deg, #092e2e, #04152b);
   min-height: 100vh;
+}
+
+section {
+  width: 100vw;
   padding-bottom: 100px;
 }
 
@@ -20,6 +24,7 @@ a {
   text-decoration: none !important;
 
   color: white;
+  transform: scale(1);
   transition: 0.1s;
 
   &:hover {

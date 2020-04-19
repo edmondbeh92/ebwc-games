@@ -1,22 +1,16 @@
-import React, { useState } from "react";
-import renderHTML from "react-render-html";
-import "../../../style/other.scss";
+import React from "react";
 
-export const ModelContent = (props) => {
-  if (props.data) {
-    return (
-      <div className="content">
-        <h3 className="text-center">{props.data.title}</h3>
-        <div className="text-center my-4">{renderHTML(props.data.html)}</div>
-      </div>
-    );
-  } else {
-    return (
-      <div className="content">
-        <h3>WELCOME TO THE MODEL PAGE!</h3>
-        <hr />
-        <div></div>
-      </div>
-    );
-  }
-};
+const selector = /http.*embed/g;
+
+const ModelContent = ({ model: { title, thumbnail_url, html } }) => (
+  <>
+    <img src={thumbnail_url} alt="" className="model-background" />
+    <iframe
+      title={title}
+      src={html.match(selector)[0]}
+      frameBorder="0"
+    ></iframe>
+  </>
+);
+
+export default ModelContent;
