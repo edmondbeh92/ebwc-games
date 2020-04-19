@@ -13,8 +13,7 @@ const Games = () => {
   return (
     <>
       <section>
-        <GameList data={games} />
-        <GameContent game={game} />
+        {game ? <GameContent game={game} /> : <GameList games={games} />}
       </section>
       <Footer />
     </>

@@ -4,7 +4,7 @@ import "../../style/homepage.scss";
 
 const Home = () => (
   <>
-    <section className="home container text-center">
+    <section className="container text-center">
       <img
         src={require("../../images/ebwc_weblogo.png")}
         alt="EBWC_Image"

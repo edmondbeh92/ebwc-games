@@ -30,7 +30,7 @@
 
 @keyframes glowing {
   100% {
-    box-shadow: 0 0 10px red, 0 0 20px #9d3d29, 0 0 30px #9d3d29, 0 0 10px white;
+    box-shadow: 0 0 1px 1px white, 0 0 10px red, 0 0 20px #9d3d29, 0 0 30px #9d3d29;
   }
 }
 
