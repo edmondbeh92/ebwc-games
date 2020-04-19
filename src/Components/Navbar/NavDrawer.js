@@ -8,19 +8,15 @@ const PageDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = () => setIsOpen(!isOpen);
 
-  const links = navLinks.map((navLink) => (
-    <NavLinks key={navLink.id} navLink={navLink} />
-  ));
-
-  const linksInDrawer = navLinks.map((navLink) => (
-    <NavLinks key={navLink.id} navLink={navLink} toggleOpen={toggleOpen} />
-  ));
-
   const drawerClass = `drawer ${isOpen ? "open" : ""}`;
 
   return (
     <>
-      <div className="d-flex align-items-center no-drawer">{links}</div>
+      <div className="d-flex align-items-center no-drawer">
+        {navLinks.map((navLink) => (
+          <NavLinks key={navLink.id} navLink={navLink} />
+        ))}
+      </div>
 
       <button className="drawer-open-btn" onClick={toggleOpen}>
         <FontAwesomeIcon icon="bars" />
@@ -33,7 +29,13 @@ const PageDrawer = () => {
           </button>
         </div>
 
-        {linksInDrawer}
+        {navLinks.map((navLink) => (
+          <NavLinks
+            key={navLink.id}
+            navLink={navLink}
+            toggleOpen={toggleOpen}
+          />
+        ))}
       </div>
     </>
   );

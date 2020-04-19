@@ -8,7 +8,7 @@ const Logo = () => {
   return (
     <Link
       to="/"
-      className={"d-flex align-items-center"}
+      className="d-flex align-items-center"
       onMouseEnter={() => setGlow(true)}
       onMouseLeave={() => setGlow(false)}
     >
