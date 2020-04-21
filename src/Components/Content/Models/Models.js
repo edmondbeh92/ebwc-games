@@ -10,7 +10,6 @@ const MODEL_ROOT_API =
 
 const Models = () => {
   const { name } = useParams();
-
   const [models, setModels] = useState([]);
   const [model, setModel] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -52,7 +51,7 @@ const Models = () => {
         handleChange={handleChange}
       />
 
-      {model ? (
+      {name && model ? (
         <ModelContent model={model} />
       ) : (
         <div className="model-home text-center">
