@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9b97350655756aeccc698a56e7c1a4cf",
+    "revision": "699087ccc4bca52d444f31c05d0671b4",
     "url": "/ebwc-games/index.html"
   },
   {
-    "revision": "94ffddc6d4330ee39d4b",
+    "revision": "15bf0b1d390005d11937",
     "url": "/ebwc-games/static/css/main.230a36e1.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ebwc-games/static/js/2.6eb24803.chunk.js"
   },
   {
-    "revision": "94ffddc6d4330ee39d4b",
-    "url": "/ebwc-games/static/js/main.281d1382.chunk.js"
+    "revision": "15bf0b1d390005d11937",
+    "url": "/ebwc-games/static/js/main.83e485e8.chunk.js"
   },
   {
     "revision": "d6d72256fb8f9cf61997",
