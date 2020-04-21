@@ -61,7 +61,7 @@ $model-scrollbar-height: 300px;
 }
 
 .model-home {
-  padding: 0 30px 0 330px;
+  padding: 0 30px 0 calc(20vw + 30px);
 }
 
 img.model-background,
@@ -130,6 +130,11 @@ img.model-background {
         height: 1px;
       }
     }
+  }
+
+  .model-home {
+    padding: 0 20px;
+    padding-top: $model-scrollbar-height;
   }
 
   img.model-background,
