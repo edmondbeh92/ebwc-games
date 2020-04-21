@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NavLinks = ({ navLink: { url, icon, text }, toggleOpen }) => (
   <div className="drawer-link-wrapper">
-    <Link to={`/${url}`} onClick={toggleOpen}>
+    <Link to={`/ebwc-games/${url}`} onClick={toggleOpen}>
       <FontAwesomeIcon className="text-warning" icon={icon} />
       <span className="bebas-font navbar-font">{text}</span>
     </Link>

@@ -6,7 +6,7 @@ const ModelCard = ({ model, handleChange }) => {
 
   return (
     <Link
-      to={`/3d_models/${title}`}
+      to={`/ebwc-games/3d_models/${title}`}
       className="model-card"
       onClick={() => handleChange(model)}
     >

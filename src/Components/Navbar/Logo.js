@@ -7,7 +7,7 @@ const Logo = () => {
 
   return (
     <Link
-      to="/"
+      to="/ebwc-games"
       className="d-flex align-items-center"
       onMouseEnter={() => setGlow(true)}
       onMouseLeave={() => setGlow(false)}
