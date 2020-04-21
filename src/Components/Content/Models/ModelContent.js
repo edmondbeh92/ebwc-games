@@ -9,6 +9,7 @@ const ModelContent = ({ model: { title, thumbnail_url, html } }) => (
       title={title}
       src={html.match(selector)[0]}
       frameBorder="0"
+      className="model-iframe"
     ></iframe>
   </>
 );

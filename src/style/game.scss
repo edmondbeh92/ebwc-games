@@ -1,12 +1,76 @@
-.game-header {
-  position: relative;
-  margin-top: -110px;
-  width: 100vw;
-  height: 100vh;
+.hero-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.header-content {
+  position: relative;
+  margin-bottom: 100px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 120px;
+    line-height: 130px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 50px rgb(0, 89, 255), 0 0 100px rgb(28, 145, 255);
+
+    @media (max-width: 767px) {
+      font-size: 49px;
+      line-height: 60px;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 30px;
+      line-height: 32px;
+    }
+  }
+
+  p {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 50px white;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
+
+.game-header {
+  position: relative;
+  margin-top: -110px;
+  width: 100vw;
+  height: 600px;
+  margin-bottom: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    height: 400px;
+  }
+
+  @media (max-width: 500px) {
+    height: 300px;
+  }
 
   img {
     position: absolute;
@@ -21,12 +85,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.411), rgba(0, 0, 255, 0.589), black);
-  }
-
-  .header-content {
-    position: relative;
-    margin-bottom: 150px;
+    background-image: radial-gradient(transparent 30%, rgba(7, 7, 85, 0.589), black);
   }
 }
 
@@ -77,6 +136,7 @@ a.button {
       cursor: pointer;
 
       &:hover {
+        transform: scale(1.02);
         filter: brightness(1.1);
         box-shadow: 0 0 5px 2px white, 0 0 10px 5px rgb(28, 145, 255);
       }
@@ -97,21 +157,63 @@ a.button {
     z-index: 100;
 
     > div {
+      $border-radius: 10px;
+
       position: relative;
+      border-radius: $border-radius;
+      box-shadow: 0 0 5px 2px white, 0 0 10px 5px rgb(28, 145, 255);
 
       .close-btn {
         position: absolute;
-        top: 0;
-        right: 0;
-        padding: 20px;
-        background: black;
+        top: 20px;
+        right: 20px;
         z-index: 1;
+        filter: drop-shadow(0 0 2px black);
         cursor: pointer;
       }
 
       img {
         position: relative;
+        border-radius: $border-radius;
+        width: 100%;
       }
+    }
+  }
+}
+
+.iframe-wrapper {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  margin: auto;
+
+  &.hero {
+    position: relative;
+    top: -110px;
+    margin: 0;
+    max-width: initial;
+    width: 100vw;
+  }
+
+  .iframe-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.13) 50%, black);
+  }
+
+  .iframe-content {
+    position: relative;
+    padding-bottom: 56.25%;
+
+    > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
   }
 }

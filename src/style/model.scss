@@ -61,11 +61,11 @@ $model-scrollbar-height: 300px;
 }
 
 .model-home {
-  padding: 0 30px 0 330px;
+  padding: 0 30px 0 calc(20vw + 30px);
 }
 
 img.model-background,
-iframe {
+img + .model-iframe {
   position: absolute;
   top: 0;
   right: 0;
@@ -132,8 +132,13 @@ img.model-background {
     }
   }
 
+  .model-home {
+    padding: 0 20px;
+    padding-top: $model-scrollbar-height;
+  }
+
   img.model-background,
-  iframe {
+  img + .model-iframe {
     padding-top: $model-scrollbar-height;
     width: 100%;
   }

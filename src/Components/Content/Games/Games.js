@@ -8,7 +8,8 @@ import "../../../style/game.scss";
 
 const Games = () => {
   const { name } = useParams();
-  const game = games.find((game) => game.name === name);
+  const gameName = "Celestial Raid"; //TEMPORARY
+  const game = games.find((game) => game.name === gameName);
 
   return (
     <>
