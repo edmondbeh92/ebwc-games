@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "551e4b0059f95b23209fd491f671eee7",
+    "revision": "9b97350655756aeccc698a56e7c1a4cf",
     "url": "/ebwc-games/index.html"
   },
   {
-    "revision": "c66b235bcbf2dd7ab38f",
+    "revision": "94ffddc6d4330ee39d4b",
     "url": "/ebwc-games/static/css/main.230a36e1.chunk.css"
   },
   {
-    "revision": "9333ee27d9c138536be3",
-    "url": "/ebwc-games/static/js/2.6d324055.chunk.js"
+    "revision": "3b8b4727ecfe093f4102",
+    "url": "/ebwc-games/static/js/2.6eb24803.chunk.js"
   },
   {
-    "revision": "c66b235bcbf2dd7ab38f",
-    "url": "/ebwc-games/static/js/main.c3a3c5cc.chunk.js"
+    "revision": "94ffddc6d4330ee39d4b",
+    "url": "/ebwc-games/static/js/main.281d1382.chunk.js"
   },
   {
     "revision": "d6d72256fb8f9cf61997",
