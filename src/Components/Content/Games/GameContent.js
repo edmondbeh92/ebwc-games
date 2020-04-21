@@ -9,8 +9,8 @@ const GameContent = ({ game }) => {
     engine,
     description,
     game_url,
-    youtube_url,
-    banner,
+    // youtube_url,
+    // banner,
     images,
   } = game;
 
