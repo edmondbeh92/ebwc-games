@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import "../../../style/game.scss";
 
 const Games = () => {
-  const { name } = useParams();
+  // const { name } = useParams();
   const gameName = "Celestial Raid"; //TEMPORARY
   const game = games.find((game) => game.name === gameName);
 
