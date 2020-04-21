@@ -65,7 +65,7 @@ $model-scrollbar-height: 300px;
 }
 
 img.model-background,
-iframe {
+img + .model-iframe {
   position: absolute;
   top: 0;
   right: 0;
@@ -133,7 +133,7 @@ img.model-background {
   }
 
   img.model-background,
-  iframe {
+  img + .model-iframe {
     padding-top: $model-scrollbar-height;
     width: 100%;
   }
